@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Chủ</title>
+    <script src="https://kit.fontawesome.com/daf52595d7.js" crossorigin="anonymous"></script>
+    <link data-n-head="true" rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <style>
+        #box {
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            background-image: url("https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516521972191.jpg");
+            z-index: 0;
+        }
+
+        #box {
+            margin: auto;
+            height: 790px;
+            width: 100%;
+            animation-name: example;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            background-size: revert;
+        }
+
+        @keyframes example {
+            20% {
+                background-image: url("https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516521972191.jpg");
+            }
+            10% {
+                background-image: url("https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516524062780.jpg");
+            }
+
+        }
+
+        #header1 {
+            height: 66px;
+            float: top;
+            z-index: 1;
+
+        }
+
+        .footer1 {
+            height: 200px;
+            background-color: rgba(17, 17, 17, 0.75);
+        }
+
+        #footer2 {
+            background: rgba(1, 1, 1, 0.16);
+            height: 50px;
+            width: 100%;
+        }
+
+        #footer3 {
+            background: black;
+            height: 150px;
+            width: 100%;
+            float: bottom;
+            text-align: center;
+            align-content: center;
+            color: #d5feff;
+
+        }
+
+        #footer3 a {
+            text-decoration: none;
+            color: #d5feff;
+            padding-left: 10px;
+        }
+
+        #menuhd {
+            padding-top: 0px;
+        }
+
+        .header_item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            float: left;
+            width: auto;
+            height: 66px;
+            margin: 0 20px !important;
+            line-height: 66px;
+            font-size: 17px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0;
+            color: #ccc;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .header_item:hover {
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+        }
+
+        #menulogin {
+            display: flex;
+            position: relative;
+            float: right;
+            width: auto;
+            height: 66px;
+            line-height: 66px;
+            font-size: 17px;
+            letter-spacing: 0;
+            color: #ccc;
+            text-align: center;
+            cursor: pointer;
+            margin-top: -75px;
+        }
+
+        .character__sidebar {
+            position: sticky;
+            z-index: 11;
+            width: 150px;
+            height: 49%;
+            margin-top: -200px;
+            background-color: rgba(17, 17, 17, 0.75);
+
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul a {
+            display: block;
+            padding-top: 35px;
+            padding-left: 30px;
+            text-decoration: none;
+            height: 61px;
+            color: #ccc;
+
+        }
+
+        .character__city:hover {
+            background: rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+        }
+
+        #divnv__avatar {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            z-index: 9;
+            bottom: 0px;
+            padding-top: -0px;
+            width: 100%;
+            height: 175px;
+            background: rgba(204, 204, 204, 0.2);
+        }
+
+        #divnv__avatar li {
+            height: 180px;
+        }
+
+        .khungnv {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: inline-block;
+            margin-top: 0px;
+
+        }
+
+        #divnv_avatar p {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 18px;
+            color: #fff;
+            text-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+            text-align: center;
+            border: rgba(204, 204, 204, 0.2) solid 2px;
+        }
+
+        #divnv_avatar li:hover {
+            background: #000000;
+            border: rgba(204, 204, 204, 2) solid 2px;
+        }
+
+        #mainnv {
+            height: 820px;
+            display: flex;
+            z-index: 9;
+        }
+
+
+        #tennv {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            height: 220px;
+            width: 480px;
+            margin-top: 350px;
+            margin-left: 800px;
+            z-index: 9;
+            float: right;
+            position: absolute;
+        }
+
+        #thongtinnv {
+            display: flex;
+            position: relative;
+            float: left;
+            font-size: 17px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0;
+            color: #ccc;
+            text-align: center;
+            cursor: pointer;
+            width: 474px;
+            height: 215px;
+            resize: none;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            border: none;
+
+
+        }
+
+        #tennv_mini {
+            position: relative;
+            height: 150px;
+            width: 100%;
+            border-radius: 10px;
+            margin-left: 900px;
+            margin-top: 200px;
+            z-index: 12;
+            background: rgba(1, 1, 1, 0.35);
+
+        }
+
+
+        #mainnv_anh_nv1 {
+            z-index: 9;
+            height: 790px;
+
+
+        }
+
+        .anhnv_1 {
+
+        }
+
+        .anhnv_2 {
+            z-index: 12;
+            display: flex;
+            height: 790px;
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 3s;
+            animation-name: animatetop;
+            animation-duration: 1s;
+
+        }
+
+
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+
+        #menutinh {
+            position: fixed;
+            height: 70px;
+            background-color: rgba(17, 17, 17, 0.75);
+            width: 100%;
+            z-index: 11;
+        }
+
+        #char_lyue {
+            display: none;
+        }
+
+        #div_land_lyue:hover #char_lyue {
+            display: flex;
+            border: 2px solid #d5feff;
+            background: rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+            -webkit-animation-name: animateleft;
+            -webkit-animation-duration: 30s;
+            animation-name: animatetop;
+            animation-duration: 3s;
+        }
+
+        #char_ina {
+            display: none;
+        }
+
+        #div_land_ina:hover #char_ina {
+            display: flex;
+            border: 2px solid #d5feff;
+            background: rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 30s;
+            animation-name: animatetop;
+            animation-duration: 3s;
+        }
+
+        #char_mon {
+            display: none;
+        }
+
+        #div_land_mond:hover #char_mon {
+            display: flex;
+            border: 2px solid #d5feff;
+            background: rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+            -webkit-animation-name: animateleft;
+            -webkit-animation-duration: 3s;
+            animation-name: animateleft;
+            animation-duration: 1s;
+        }
+
+        #anhtenNV {
+
+        }
+
+        .anianh_1 {
+            position: absolute;
+            z-index: 12;
+
+        }
+
+        .anianh_2 {
+            -webkit-animation-name: animateleft;
+            -webkit-animation-duration: 3s;
+            animation-name: animateleft;
+            animation-duration: 1s;
+            z-index: 12;
+        }
+
+        @-webkit-keyframes animateleft {
+            from {
+                left: -500px;
+                opacity: 0
+            }
+            to {
+                left: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animateleft {
+            from {
+                left: -500px;
+                opacity: 0
+            }
+            to {
+                left: 0;
+                opacity: 1
+            }
+        }
+
+    </style>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(17, 17, 17, 0.75);
+            border-radius: 10px;
+
+            z-index: 15;
+        }
+
+        #modaltest {
+            background-color: rgba(17, 17, 17, 0.75);
+            border-radius: 10px;
+
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: rgba(17, 17, 17, 0.75);
+            border-radius: 10px;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 360px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            color: #ccc;
+
+        }
+
+
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close2 {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close2:hover,
+        .close2:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: rgba(17, 17, 17, 0.55);
+
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+            background-color: rgba(17, 17, 17, 0.75);
+
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: rgba(17, 17, 17, 0.75);
+        }
+
+        .modal-footer button {
+            border-color: #cccccc;
+            cursor: pointer;
+        }
+
+        #dangnhapbtn:hover {
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body onload="show()">
+
+<div id="box">
+    <img height="92%" style="position: absolute;z-index: 1" src="https://genshin.hoyoverse.com/_nuxt/img/6c9d197.png">
+    <div id="header1">
+        <div id="menutinh">
+            <table id="menuhd">
+                <tr>
+                    <td><img height="66" src="icon/GIEN_1587984203_6764.png"></td>
+                    <td><a class="header_item">Trang Chủ</a></td>
+                    <td><a class="header_item">Tin Tức</a></td>
+                    <td><a href="" class="header_item" id="dangnhap2" style="text-decoration: none">Nhân Vật</a></td>
+                </tr>
+            </table>
+            <table id="menulogin">
+                <tr id="trlogin">
+                    <td><a class="header_item" id="dangnhap">Đăng nhập</a></td>
+                    <td><a class="header_item" id="dangky">Đăng kí</a></td>
+                </tr>
+                <tr id="trdx" style="display: none">
+                    <td><a class="header_item" id="xinchao"></a></td>
+                    <td><a class="header_item" onclick="dangxuat()">Đăng xuất</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="mainnv" style="width: 100%">
+            <img id="mainnv_anh_nv1" class="anhnv_1"
+                 src="https://webstatic.hoyoverse.com/upload/contentweb/2022/08/23/a15445b2b2e4443398eabf3b479f49e7_768855693810930965.png">
+
+        </div>
+    </div>
+
+    <div id="tennv">
+
+        <textarea id="thongtinnv" style="overflow:hidden"> Đội trưởng kiểm lâm của rừng Avidya, tốt nghiệp ngành thực vật học của Học Viện Amurta. Mỗi ngày đều trải qua cuộc sống phong phú khi đi tuần tra trong rừng mưa, bảo vệ hệ sinh thái và dạy dỗ những kẻ ngốc nghếch.</textarea>
+    </div>
+    <div id="tennv_mini" style="z-index: 12;">
+        <img id="anhtenNV" class="anianh_1" style="position: absolute"
+             src="https://webstatic.hoyoverse.com/upload/contentweb/2022/08/16/1af68cc9aecb16ebe7bac7644bbdae69_5854186919908101762.png"
+             alt="">
+    </div>
+    <ul class="character__sidebar">
+        <li class="character__city"><a href="/vi/character/mondstadt" class="">
+            Mondstadt
+        </a></li>
+        <li class="character__city"><a href="/vi/character/liyue" class="">
+            Liyue
+        </a></li>
+        <li class="character__city"><a href="/vi/character/inazuma" class="">
+            Inazuma
+        </a></li>
+        <li class="character__city character__city--active"><a href="/vi/character/sumeru" class="nuxt-link-active">
+            Sumeru</a></li>
+    </ul>
+
+    <div id="divnv__avatar">
+        <div id="divnv_avatar">
+            <ul class="khungnv" style="transform: translate3d(0px, 0px, 0px);">
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="div_land_mond" style=" width: 100%;height: 260px;position: relative">
+    <img id="char_mon" style="z-index: 10;position: absolute"
+         src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210615/2021061518151058323.png"
+         alt="">
+    <img id="div_land_mond2" style="z-index: 9;"
+         src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200211/2020021114275255981.jpg"
+         alt="">
+</div>
+<div id="div_land_lyue" style="width: 100%;height:260px;position: relative">
+    <img height="260px" id="char_lyue" style="z-index: 9;position: absolute;"
+         src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210624/2021062410083822749.png"
+         alt="">
+    <img id="div_land_lyue2" style="z-index: 10; "
+         src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200526/2020052612372361982.jpg"
+         alt="">
+</div>
+<div id="div_land_ina" style=" width:100%;height: 260px;position: relative">
+    <img id="char_ina" style="z-index: 9;position: absolute"
+         src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071515201245150.png"
+         alt="">
+    <img id="div_land_ina2" style="z-index: 10;"
+         src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210720/2021072015230536749.jpg"
+         alt="">
+</div>
+<div class="footer1">
+    <div id="footer2">
+        <table align="center">
+            <tr>
+                <td width="44" height="56px"><a class="fa fa-youtube-square" style="color: #FFE851;" href=""></a></td>
+                <td width="45"><a class="fa fa-facebook-f " style="color: #845ef7;" href=""></a></td>
+                <td width="46"><a class="fa fa-twitter-square" style="color: #1FA4E4;" href=""></a></td>
+                <td width="39"><a class="fa fa-twitter-square" style="color: #D87B7C" href=""></a></td>
+                <td width="42"><a class="fa fa-pinterest-square" style="color: #F36062;" href=""></a></td>
+                <td><a href="https://www.facebook.com/GenshinImpact.vi/" target="_blank"
+                       class="footer__socialitem"><span class="icon-facebook"></span></a></td>
+
+            </tr>
+        </table>
+
+    </div>
+    <div id="footer3">
+        <table align="center">
+            <tr>
+                <td colspan="4" id="iconfd"><a href=""><img height="66px" src="icon/GIEN_1587984203_6764.png"></a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="">Chính sách quyền riêng tư</a>
+                </td>
+                <td>
+                    <a href=""> Điều khoản dịch vụ</a>
+                </td>
+                <td>
+                    <a href="">Giới thiệu công ty</a>
+                </td>
+                <td>
+                    <a href="">Liên hệ chúng tôi</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="modaltest">
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Đăng Nhập</h2>
+            </div>
+            <div class="modal-body">
+                <table id="logintb">
+                    <tr>
+                        <td>
+                            Tên đăng nhập:
+                        </td>
+                        <td><input id="tk" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input id="mk" type="password"></td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer" style="padding-left: 130px;padding-top: 10px;padding-bottom: 10px">
+                <button onclick="dangnhap()" style=" background-color: rgba(17, 17, 17, 0.75); color: #cccccc "
+                        id="dangnhapbtn">Đăng nhập
+                </button>
+                <!--                <button style=" background-color: rgba(17, 17, 17, 0.75);color: #cccccc " id="dangkybtn">Đăng nhập</button>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    // class NhanVat {
+    //     tennv;
+    //     iconnv;
+    //     anhnv;
+    //     anhten;
+    //     thongtinnv;
+    //
+    //     constructor(tennv, iconnv, anhnv, anhten, thongtinnv) {
+    //         this.tennv = tennv;
+    //         this.iconnv = iconnv;
+    //         this.anhnv = anhnv;
+    //         this.anhten = anhten;
+    //         this.thongtinnv = thongtinnv;
+    //     }
+    //
+    // }
+    //
+    // let nv1 = new NhanVat("Tighnari", "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/16/1f88bdae2e99307e68a0bbfedf6cc74f_5324454891915644523.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/23/a15445b2b2e4443398eabf3b479f49e7_768855693810930965.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/16/1af68cc9aecb16ebe7bac7644bbdae69_5854186919908101762.png", "Đội trưởng kiểm lâm của rừng Avidya, tốt nghiệp ngành thực vật học của Học Viện Amurta. Mỗi ngày đều trải qua cuộc sống phong phú khi đi tuần tra trong rừng mưa, bảo vệ hệ sinh thái và dạy dỗ những kẻ ngốc nghếch.")
+    // let nv2 = new NhanVat("Kazuha", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210622/2021062218083210942.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/44e2d916d9c13bca863d56423004fd98_2265149927067716681.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210622/2021062218084872203.png", "Ronin Samurai đến từ Inazuma. Con người khiêm tốn có tính cách hoà nhã.\n" +
+    //     "Dưới vẻ ngoài trẻ trung phóng khoáng, ẩn chứa rất nhiều chuyện của quá khứ. Trông có vẻ tuỳ hứng nhưng trong lòng lại có quy tắc hành xử của riêng mình.")
+    // let nv3 = new NhanVat("Sayu", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210730/2021073014504919060.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/982542a6c0e2dfb628a4f087fa6bde5d_80307375200193814.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210730/2021073014511015891.png", "Sayu - Ninja đặc biệt trực thuộc tổ chức bí mật Shiyuumatsu Ban, luôn theo đuổi ước mơ ngủ ngon và cao lớn.")
+    // let nv4 = new NhanVat("Kokomi", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210909/2021090911214747829.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/8ca5953fb331d71bc880496f5e8b7745_5746095903625469716.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210909/2021090911220530123.png", "Kokomi là Thánh Pháp Sư của đảo Watatsumi, cũng là thủ lĩnh tối cao đương nhiệm của đảo Watatsumi.\n" +
+    //     "Cô thông tuệ binh pháp, giỏi mưu lược và có những hiểu biết độc đáo về mặt quân sự, cũng có thể xử lý đâu ra đấy những việc như đối nội đối ngoại.\n" +
+    //     "Nhưng, người thủ lĩnh thâm sâu khó dò trong mắt mọi người này, hình như cũng có mặt không ai hay biết...")
+    // let nhanvat = [nv1, nv2, nv3, nv4]
+    // localStorage.setItem("test", JSON.stringify(nhanvat))
+
+    let showtt = document.getElementById("divnv_avatar");
+    let nv = JSON.parse(localStorage.getItem("test"))
+    show();
+
+    // function addNV() {
+    //     let tennv = document.getElementById("input1").value
+    //     let iconnv = document.getElementById("input2").value
+    //     let anhnv = document.getElementById("input3").value
+    //     let anhten = document.getElementById("input4").value
+    //     let thongtinnv = document.getElementById("input5").value
+    //     let newnv = new NhanVat(tennv, iconnv, anhnv, anhten, thongtinnv)
+    //     nv.push(newnv)
+    //     localStorage.setItem("test", JSON.stringify(nhanvat))
+    //
+    //     show()
+    //
+    // }
+    function show() {
+        let hienthi = ""
+        for (let i = 0; i < nv.length; i++) {
+            hienthi += `
+                         <li  onclick="thaydoi('${nv[i].tennv}')" style="width: 110px;height: 180px; margin-right: 34px; display: inline-block;background: rgba(0,0,0,0.23)">
+                         <img id="avt" style="width: 106px;" src="${nv[i].iconnv}" draggable="false">
+                         <p>${nv[i].tennv}</p></li>   `
+        }
+        showtt.innerHTML = hienthi
+    }
+
+    let anicount = 0;
+
+    function thaydoi(tenNV) {
+
+        for (let i = 0; i < nv.length; i++) {
+            if (tenNV == nv[i].tennv) {
+                document.getElementById("mainnv_anh_nv1").src = nv[i].anhnv;
+                document.getElementById("anhtenNV").src = nv[i].anhten;
+                document.getElementById("thongtinnv").innerText = nv[i].thongtinnv;
+
+            }
+        }
+        if (anicount == 0) {
+            document.getElementById("anhtenNV").className = "anianh_2"
+            document.getElementById("mainnv_anh_nv1").className = "anhnv_2"
+
+            anicount += 1
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            sleep(500).then(() => {
+                document.getElementById("anhtenNV").className = "anianh_1"
+                document.getElementById("mainnv_anh_nv1").className = "anhnv_1";
+                anicount = 0;
+            });
+
+        }
+
+    }
+
+    function dangxuat() {
+        window.location.reload(true)
+    }
+
+</script>
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("dangnhap");
+    var btnp = document.getElementById("dangnhap2");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    btnp.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    let User = JSON.parse(localStorage.getItem("user"))
+    if (User === null) {
+        User = [];
+    }
+
+    function dangnhap() {
+        let tk = document.getElementById("tk").value
+        let mk = document.getElementById("mk").value
+        let kt=0;
+        for (let i = 0; i < User.length; i++) {
+            if (tk == User[i].tendangnhap && mk == User[i].matkhau) {
+                alert("Xin chào " + User[i].tenhienthi)
+                let text = "Chuyển hướng";
+                if (confirm(text) == true) {
+                    window.location = "Nhanvat.html";
+                    return;;
+
+                } else {
+                    modal.style.display = "none";
+                    document.getElementById("trlogin").style.display = "none"
+                    document.getElementById("trdx").style.display = "inherit"
+                    document.getElementById("dangnhap2").onclick = ""
+                    document.getElementById("dangnhap2").href = "Nhanvat.html"
+                    document.getElementById("xinchao").innerHTML=""+User[i].tenhienthi
+                    return;
+
+                }
+            }
+            else {
+                kt+=1
+            }
+
+
+        }
+        if(kt!=0){alert("Tài khoản hoặc mật khẩu không đúng")}
+
+    }
+
+
+</script>
+<div id="modaltest2">
+
+    <div id="myModal2" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close2">&times;</span>
+                <h2>Đăng Ký</h2>
+            </div>
+            <div class="modal-body">
+                <table id="sigin">
+                    <tr>
+                        <td>
+                            Tên hiển thị:
+                        </td>
+                        <td><input id="tht" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tên đăng nhập:
+                        </td>
+                        <td><input id="tkdk" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input id="mkdk" type="password" required></td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer" style="padding-left: 130px;padding-top: 10px;padding-bottom: 10px">
+                <button onclick="dangky()" style=" background-color: rgba(17, 17, 17, 0.75); color: #cccccc "
+                        id="dangkybtn">Đăng ký
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    var modal2 = document.getElementById("myModal2");
+
+    var btn2 = document.getElementById("dangky");
+
+    var span2 = document.getElementsByClassName("close2")[0];
+    btn2.onclick = function () {
+        modal2.style.display = "block";
+    }
+    span2.onclick = function () {
+        modal2.style.display = "none";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+    // localStorage.setItem("user", JSON.stringify(arruser))
+    let User2 = JSON.parse(localStorage.getItem("user"))
+
+    function dangky() {
+        let kt=0
+        let tenht = document.getElementById("tht").value;
+        let tkm = document.getElementById("tkdk").value;
+        let mkm = document.getElementById("mkdk").value;
+        if (tenht == "" || tkm == "" || mkm == "") {
+            alert("Nhập tử tế dùm")
+        } else {
+            for (let i = 0; i < User.length; i++) {
+                if (tkm === User[i].tendangnhap) {
+                    alert("trùng rồi đặt khác đi");
+                    kt+=1;
+                    break
+                }
+            }
+            if(kt==0) {
+                let newObj = new nguoidung(tenht, tkm, mkm);
+                User.push(newObj);
+                alert("đăng ký thành công")
+                localStorage.setItem("user", JSON.stringify(User))
+                window.location.reload(true)
+
+            }
+        }
+    }
+</script>
+<script src="Class.js"></script>
+
+</body>
+</html>
