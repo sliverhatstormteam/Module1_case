@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhân vật</title>
+    <style>
+        #nen {
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            background: rgba(1, 1, 1, 0.95);
+            animation-name: example;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            color: #ccc;
+            background: url(https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516521972191.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        @keyframes example {
+            20% {
+                background-image: url("https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516521972191.jpg");
+            }
+            20% {
+                background-image: url("https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210715/2021071516524062780.jpg");
+            }
+        }
+
+        #menutinh {
+            position: fixed;
+            height: 70px;
+            background-color: rgba(17, 17, 17, 0.75);
+            width: 100%;
+            z-index: 11;
+            margin-top: 0px;
+        }
+
+        #menuhd {
+            margin-top: 0px;
+            float: top;
+        }
+
+        .header_item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            float: left;
+            width: auto;
+            height: 66px;
+            margin: 0 20px !important;
+            line-height: 66px;
+            font-size: 17px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0;
+            color: #ccc;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .header_item:hover {
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+        }
+
+        #banght {
+            border: solid 1px;
+        }
+
+        #banght tr td {
+            width: 100px;
+            height: 100px;
+        }
+
+        #bocmau {
+            background: rgba(1, 1, 1, 0.63);
+        }
+
+
+    </style>
+    <style>
+        .truot {
+            position: fixed;
+            z-index: 1;
+            height: 460px;
+            top: 100px;
+            right: 0;
+            background: rgba(1, 1, 1, 0.63);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-radius: 10px;
+        }
+
+        .truot a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .truot a:hover {
+            color: #f1f1f1;
+        }
+
+        .truot .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #inputtim {
+            background-position: 10px 10px;
+            background-repeat: repeat;
+            width: 100%;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="nen">
+    <div id="bocmau">
+        <div id="menutinh">
+            <table id="menuhd">
+                <tr>
+                    <td><img height="66" src="icon/GIEN_1587984203_6764.png"></td>
+                    <td><a style="text-decoration: none" href="index.html" class="header_item">Đăng Xuất</a></td>
+                    <td><a class="header_item">Tin Tức</a></td>
+                    <td><a class="header_item">Nhân Vật</a></td>
+                    <td><a class="header_item" onclick="openNav()">Chỉnh sửa</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="position: relative; height: 100px"></div>
+        <div id="bangdk" style="position: relative; ;">
+
+            <table id="banght">
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div id="thanhben" class="truot">
+    <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">X</a>
+    <table border="0">
+        <tr>
+            <td><input type="text" id="inputtim" placeholder="Tìm kiếm">
+            </td>
+            <td><input type="button" value="Tìm" onclick="timkiem()"></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Tên nhân vật" id="input1"></td>
+            <td rowspan="6"><img class="tooltip" id="paimonimg" onclick="paimon()" height="200px"
+                                 src="https://preview.redd.it/ki90xjn3vz561.png?width=640&crop=smart&auto=webp&s=88b26d89defeb97bd0d9c8a294321ca479424099"
+                                 alt=""></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Link icon" id="input2"></td>
+        </tr>
+        <td><input type="text" placeholder="Link ảnh nhân vật" id="input3"></td>
+        <tr>
+            <td><input type="text" placeholder="Ảnh tên" id="input4"></td>
+        </tr>
+        <tr>
+            <td><textarea rows="20" type="text" placeholder="thông tin nhân vật" id="input5"></textarea></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="addNV()">Thêm</button>
+                <input type="button" value="Lưu " onclick="luu()"></td>
+        <tr>
+        </tr>
+        </tr>
+    </table>
+</div>
+
+<script>
+    closeNav()
+
+    function openNav() {
+        document.getElementById("thanhben").style.width = "350px";
+        document.getElementById("thanhben").style.height = "460px";
+    }
+
+    function closeNav() {
+        document.getElementById("thanhben").style.width = "0";
+        document.getElementById("thanhben").style.height = "0";
+
+    }
+
+    let dem = 0;
+
+    function paimon() {
+        if (dem == 0) {
+            document.getElementById("paimonimg").src = "https://cdn140.picsart.com/355462545013211.png?to=crop&type=webp&r=310x310&q=50"
+            dem += 1;
+        } else {
+            document.getElementById("paimonimg").src = "https://preview.redd.it/ki90xjn3vz561.png?width=640&crop=smart&auto=webp&s=88b26d89defeb97bd0d9c8a294321ca479424099"
+            dem = 0;
+        }
+        document.getElementById("input1").value = ""
+        document.getElementById("input2").value = ""
+        document.getElementById("input3").value = ""
+        document.getElementById("input4").value = ""
+        document.getElementById("input5").value = ""
+        document.getElementById("inputtim").value=""
+        timkiem();
+    }
+</script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<div id="dialog" style="display: none;  background: rgba(1, 1, 1, 0.63);color: #ccc">
+    <p>Điền đủ đi đừng cố chấp nữa</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9LFFZhoTDFG01dvu8YHgMmpfcotd9YBHTt9i2Q1uFgOKBAYMdhkWJERNv_tVKN2hyQwQ&usqp=CAU"
+         alt=""/>
+
+</div>
+
+<script>
+    function timkiem() {
+        document.getElementById("nen").style.height = "800px"
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("inputtim");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("banght");
+        tr = table.getElementsByTagName("tr");
+        let dem = tr.length
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                dem += 1;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                    dem -= 1;
+                }
+            }
+
+        }
+
+    }
+</script>
+<script>
+    class NhanVat {
+        tennv;
+        iconnv;
+        anhnv;
+        anhten;
+        thongtinnv;
+
+        constructor(tennv, iconnv, anhnv, anhten, thongtinnv) {
+            this.tennv = tennv;
+            this.iconnv = iconnv;
+            this.anhnv = anhnv;
+            this.anhten = anhten;
+            this.thongtinnv = thongtinnv;
+        }
+
+    }
+
+    let nv1 = new NhanVat("Tighnari", "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/16/1f88bdae2e99307e68a0bbfedf6cc74f_5324454891915644523.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/23/a15445b2b2e4443398eabf3b479f49e7_768855693810930965.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/16/1af68cc9aecb16ebe7bac7644bbdae69_5854186919908101762.png", "Đội trưởng kiểm lâm của rừng Avidya, tốt nghiệp ngành thực vật học của Học Viện Amurta. Mỗi ngày đều trải qua cuộc sống phong phú khi đi tuần tra trong rừng mưa, bảo vệ hệ sinh thái và dạy dỗ những kẻ ngốc nghếch.")
+    let nv2 = new NhanVat("Kazuha", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210622/2021062218083210942.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/44e2d916d9c13bca863d56423004fd98_2265149927067716681.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210622/2021062218084872203.png", "Ronin Samurai đến từ Inazuma. Con người khiêm tốn có tính cách hoà nhã.\n" +
+        "Dưới vẻ ngoài trẻ trung phóng khoáng, ẩn chứa rất nhiều chuyện của quá khứ. Trông có vẻ tuỳ hứng nhưng trong lòng lại có quy tắc hành xử của riêng mình.")
+    let nv3 = new NhanVat("Sayu", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210730/2021073014504919060.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/982542a6c0e2dfb628a4f087fa6bde5d_80307375200193814.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210730/2021073014511015891.png", "Sayu - Ninja đặc biệt trực thuộc tổ chức bí mật Shiyuumatsu Ban, luôn theo đuổi ước mơ ngủ ngon và cao lớn.")
+    let nv4 = new NhanVat("Kokomi", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210909/2021090911214747829.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/8ca5953fb331d71bc880496f5e8b7745_5746095903625469716.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210909/2021090911220530123.png", "Kokomi là Thánh Pháp Sư của đảo Watatsumi, cũng là thủ lĩnh tối cao đương nhiệm của đảo Watatsumi.\n" +
+        "Cô thông tuệ binh pháp, giỏi mưu lược và có những hiểu biết độc đáo về mặt quân sự, cũng có thể xử lý đâu ra đấy những việc như đối nội đối ngoại.\n" +
+        "Nhưng, người thủ lĩnh thâm sâu khó dò trong mắt mọi người này, hình như cũng có mặt không ai hay biết...")
+    let nv5 = new NhanVat("ZhongLi", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20201120/2020112022594158194.png", "https://webstatic.hoyoverse.com/upload/contentweb/2022/07/21/e699d7e2413ed5dfb384ee48c2b872d3_3459486825876994240.png", "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20201120/2020112022595237403.png", "Vị khách bí ẩn của Vãng Sinh Đường. Anh ta có vẻ bề ngoài khôi ngô tuấn tú, phong độ lịch lãm và sở hữu kiến thức vượt xa người thường.\n" +
+        "Mặc dù có lai lịch thần bí, nhưng anh ấy lại biết lễ nghi, hiểu quy định. Tọa trấn Vãng Sinh Đường, có thể thực hiện các nghi lễ của vạn vật trong trời đất.")
+    let nhanvat = [nv1, nv2, nv3, nv4, nv5]
+    let showtt = document.getElementById("banght");
+    // let showtt = "";
+    show();
+
+    function addNV() {
+        let tennv = document.getElementById("input1").value
+        let iconnv = document.getElementById("input2").value
+        let anhnv = document.getElementById("input3").value
+        let anhten = document.getElementById("input4").value
+        let thongtinnv = document.getElementById("input5").value
+        if (tennv == "" || iconnv == "" || anhten == "" || anhnv == "" || thongtinnv == "") {
+            $(function () {
+                $("#dialog").dialog();
+            });
+        } else {
+            let newnv = new NhanVat(tennv, iconnv, anhnv, anhten, thongtinnv)
+            nhanvat.push(newnv)
+            show()
+        }
+
+    }
+
+    let nv = JSON.parse(localStorage.getItem("test"))
+
+    function show() {
+        let hienthi = ""
+        for (let i = 0; i < nhanvat.length; i++) {
+            hienthi += `<tr  >
+                        <td ><p onclick="laythongtin(${i})"  id="output1">${nhanvat[i].tennv}</p></td>
+                        <td><img onclick="laythongtin(${i})" id="output2" src="${nhanvat[i].iconnv}" width="100px" ></td>
+                        <td><img onclick="laythongtin(${i})" id="output3" src="${nhanvat[i].anhnv}" width="300px" ></td>
+                        <td><img onclick="laythongtin(${i})" id="output4" src="${nhanvat[i].anhten}" width="100px" ></td>
+                        <td onclick="laythongtin(${i})" style="width: 400px"><p id="output5">${nhanvat[i].thongtinnv}</p></td>
+                        <td><button onclick="sua(${i})">Sửa</button></td>
+                        <td><button onclick="xoa(${i})">Xoá</button></td>
+                    </tr>`
+        }
+        showtt.innerHTML = hienthi
+    }
+
+    function xoa(index) {
+        nhanvat.splice(index, 1)
+        show()
+    }
+
+    function laythongtin(tenNV) {
+
+        document.getElementById("input1").value = nhanvat[tenNV].tennv
+        document.getElementById("input2").value = nhanvat[tenNV].iconnv
+        document.getElementById("input3").value = nhanvat[tenNV].anhnv
+        document.getElementById("input4").value = nhanvat[tenNV].anhten
+        document.getElementById("input5").value = nhanvat[tenNV].thongtinnv
+
+    }
+
+    function sua(index) {
+        nhanvat[index].tennv = document.getElementById("input1").value
+        nhanvat[index].iconnv = document.getElementById("input2").value
+        nhanvat[index].anhnv = document.getElementById("input3").value
+        nhanvat[index].anhten = document.getElementById("input4").value
+        nhanvat[index].thongtinnv = document.getElementById("input5").value
+        show()
+    }
+
+    function luu() {
+        localStorage.removeItem("test")
+        localStorage.setItem("test", JSON.stringify(nhanvat))
+        alert("Đã lưu!")
+        window.location
+    }
+
+    // let nv = JSON.parse(localStorage.getItem("test"))
+    //
+    // console.log(nv[0].tennv)
+    // function laythongtin(tenNV) {
+    //     for (let i = 0; i < nhanvat.length; i++) {
+    //         if (tenNV == nhanvat[i].tennv) {
+    //             document.getElementById("mainnv_anh_nv1").src = nhanvat[i].anhnv;
+    //             document.getElementById("anhtenNV").src = nhanvat[i].anhten;
+    //             document.getElementById("thongtinnv").innerText = nhanvat[i].thongtinnv;
+    //
+    //         }
+    //     }
+    // }
+
+
+</script>
+</body>
+</html>
